@@ -1,3 +1,7 @@
+/**
+Just BF without cycles, nothing interesting
+*/
+
 import java.util.Scanner;
 
 class Main{
@@ -8,10 +12,16 @@ class Main{
 
         Scanner sc = new Scanner(System.in);
         String code = sc.nextLine();
+        int c = 0; 
 
         for (int i = 0; i < code.length(); i++) {
+
+            int loop_starts_in;
+            boolean in_loop= false;
+
             char curr_command = code.toCharArray()[i];
 
+            
             switch (curr_command) {
                 case '+':
                     mem[curr_mem_slot]++;
@@ -34,13 +44,15 @@ class Main{
                     mem[curr_mem_slot] = sc.next().charAt(0);
                     break;
                 case '[':
-
+                    System.out.println("CYCLES NOT INCLUDED");
+                    System.exit(-1);
                     break;
                 case ']':
-                
+                    System.out.println("CYCLES NOT INCLUDED");
+                    System.exit(-1);
                     break;
                 default:
-                    System.out.println("_");
+                    System.out.print("_");
                     break;
 
             }
