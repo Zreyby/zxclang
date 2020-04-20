@@ -37,7 +37,7 @@ class Main{
 
                     break;
                 case ']':
-
+                
                     break;
                 default:
                     System.out.println("_");
